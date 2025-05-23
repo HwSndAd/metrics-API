@@ -43,7 +43,7 @@ public class MedidaController {
 	}
 	@GetMapping("/{evento}/{escola}")
 	public ResponseEntity<List<Medidas>> filter(@PathVariable String evento, @PathVariable String escola){
-		return ResponseEntity.ok(medidaRepository.findByEventoAndEscola(evento, escola));
+		return ResponseEntity.ok(medidaRepository.findByEventoContainingIgnoreCaseAndEscolaContainingIgnoreCase(evento, escola));
 	}
 	
 	@GetMapping(value = "/nome/{nome}")
