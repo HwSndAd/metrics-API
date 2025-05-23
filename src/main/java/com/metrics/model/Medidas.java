@@ -383,5 +383,14 @@ public class Medidas {
 	public void setCircQuadril(float circQuadril) {
 		this.circQuadril = circQuadril;
 	}
+
+	public String getEvento() {
+		return evento;
+	}
+
+	public void setEvento(String evento) {
+		this.evento = evento;
+	}
+	
 	
 }
