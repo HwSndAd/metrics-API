@@ -41,6 +41,10 @@ public class MedidaController {
 		return medidaRepository.findById(id).map(resposta -> ResponseEntity.ok(resposta))
 				.orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build());
 	}
+	@GetMapping("/{evento}/{escola}")
+	public ResponseEntity<List<Medidas>> filter(@PathVariable String evento, @PathVariable String escola){
+		return ResponseEntity.ok(medidaRepository.findByEventoAndEscola(evento, escola));
+	}
 	
 	@GetMapping(value = "/nome/{nome}")
 	public ResponseEntity<List<Medidas>> getByNome(@PathVariable String nome) {
