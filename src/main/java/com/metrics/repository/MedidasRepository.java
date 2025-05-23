@@ -14,6 +14,7 @@ public interface MedidasRepository extends JpaRepository<Medidas, Long>{
 	public List<Medidas> findAllByNomeContainingIgnoreCase(@Param("nome") String nome);
 	public List<Medidas> findAllByEscolaContainingIgnoreCase(@Param("escola") String escola);
 	
-	public List<Medidas> findByEventoAndEscola(@Param("evento") String evento, @Param("escola") String escola);
+	public List<Medidas> findByEventoContainingIgnoreCaseAndEscolaContainingIgnoreCase(@Param("evento") String evento, 
+																					@Param("escola") String escola);
 	
 }
