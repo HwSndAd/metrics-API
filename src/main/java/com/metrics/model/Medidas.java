@@ -31,7 +31,6 @@ public class Medidas {
 	@NotNull
 	@Positive
 	private float altura;
-	@NotBlank
 	private String evento;
 	
 	@NotBlank
